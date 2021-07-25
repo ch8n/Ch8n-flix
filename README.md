@@ -4,6 +4,7 @@ Practising React by building Netflix Clone
 # Requirements
 - [TMDB api key](https://www.themoviedb.org/)
 
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
