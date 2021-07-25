@@ -1,7 +1,8 @@
 const TMDB_API = process.env.REACT_APP_TMDB_API;
 
-export default {
-    baseUrl: `"https://api.themoviedb.org/3"`,
+const api = {
+    base_image_url: `https://image.tmdb.org/t/p`,
+    base_url: `https://api.themoviedb.org/3`,
     trendingMovies: `/trending/movie/week?api_key=${TMDB_API}&language=en-US`,
     trendingSeries: `/trending/tv/week?api_key=${TMDB_API}&language=en-US`,
     discoverMovies: `/discover/movie?api_key=${TMDB_API}&language=en-US`,
@@ -13,3 +14,5 @@ export default {
     romanceMovies: `/discover/movie?api_key=${TMDB_API}&language=en-US&sort_by=popularity.desc&include_adult=true&include_video=true&page=1&with_genres=10749`,
     sciFiMovies: `/discover/movie?api_key=${TMDB_API}&language=en-US&sort_by=popularity.desc&include_adult=true&include_video=true&page=1&with_genres=878`,
 }
+
+export default api
