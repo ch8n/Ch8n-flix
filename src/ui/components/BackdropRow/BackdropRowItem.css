@@ -1,0 +1,25 @@
+.backdrop__row__list {
+    display: flex;
+    flex-direction:row;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+}
+
+.backdrop__row__list::-webkit-scrollbar {
+    display: none;
+}
+
+.backdrop__row__list>img {
+    object-fit: contain;
+    width: 100%;
+    max-height: 160px;
+    margin-right: 10px;
+    transition: transform 450ms;
+}
+
+.backdrop__row__list>img:hover {
+    transform: scale(1.08);
+}

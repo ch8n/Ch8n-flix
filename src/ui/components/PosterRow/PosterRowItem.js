@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "../../../data/remote/httpClient/httpClient";
 import api from "../../../data/remote/api/request";
-import "./RowItem.css";
+import "./PosterRowItem.css";
 
 export default function RowItem({ title, url }) {
     const [movies, setMovies] = useState([]);
@@ -14,12 +14,12 @@ export default function RowItem({ title, url }) {
     }, [url])
 
     return (
-        <div className="row">
+        <div className="poster__row">
             <h2>{title}</h2>
-            <div className="row__posters">
+            <div className="poster__row__list">
                 {
                     movies.map(movie => {
-                        return <img src={`${api.base_image_url}/w500/${movie.poster_path}`} alt={movie.name} />
+                        return <img key={movie.id} src={`${api.base_image_url}/w500/${movie.poster_path}`} alt={movie.name} />
                     })
                 }
             </div>

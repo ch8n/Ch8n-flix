@@ -1,4 +1,4 @@
-.row__posters {
+.poster__row__list {
     display: flex;
     flex-direction: row;
     overflow-y: hidden;
@@ -8,11 +8,11 @@
     padding-left: 10px;
 }
 
-.row__posters::-webkit-scrollbar {
+.poster__row__list::-webkit-scrollbar {
     display: none;
 }
 
-.row__posters>img {
+.poster__row__list>img {
     object-fit: contain;
     width: 100%;
     max-height: 240px;
@@ -20,8 +20,6 @@
     transition: transform 450ms;
 }
 
-.row__posters>img:hover {
-    
-    transform: scale(1.08);
-
+.poster__row__list>img:hover {
+    transform: scale(1.09);
 }
