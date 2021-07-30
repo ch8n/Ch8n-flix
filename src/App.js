@@ -1,12 +1,15 @@
 import './App.css';
 import PosterRowItem from "./ui/components/PosterRow/PosterRowItem";
 import BackDropRowItem from "./ui/components/BackdropRow/BackdropRowItem";
+import Banner from "./ui/components/Bannner/Banner";
 import api from "./data/remote/api/request";
 
 function App() {
   return (
     <div>
       <h1>Netflix Clone!</h1>
+      
+      <Banner/>
       <div className="row">
         <PosterRowItem title="Netflix Originals" url={api.NetflixOriginal} />
         <BackDropRowItem title="Trending Movies" url={api.trendingMovies} />
