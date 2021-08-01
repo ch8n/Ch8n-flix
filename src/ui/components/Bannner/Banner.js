@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import utils from "../../../data/utils/utils";
 import axios from "../../../data/remote/httpClient/httpClient";
 import api from "../../../data/remote/api/request";
 import "./Banner.css"
@@ -33,7 +34,7 @@ export default function Banner() {
                     <button className="button_info">More Info</button>
                 </div>
                 <h1 className="banner__description">
-                    {bannerMovie?.overview}
+                    {utils.ellipse(bannerMovie?.overview, 200)}
                 </h1>
             </div>
         </header>
