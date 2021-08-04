@@ -1,3 +1,7 @@
+
+
+
+
 # Netflix-Clone-React
 Practising React by building Netflix Clone
 
@@ -6,6 +10,9 @@ Practising React by building Netflix Clone
 
 # Learning Resourcce
 [Build Netflix clone](https://www.youtube.com/watch?v=XtMThy8QKqU)
+
+# Preview
+https://user-images.githubusercontent.com/11576342/128147565-1ee0aec8-67da-46ac-afd7-0a686a9bb594.mov
 
 
 # Getting Started with Create React App
