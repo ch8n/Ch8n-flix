@@ -25,3 +25,13 @@
     max-width: 360px;
     height: 80px;
 }
+
+.banner__bottom__blend {
+    height: 7.8rem;
+    background-image: linear-gradient(
+        180deg,
+        transparent,
+        rgba(37,37,37,0.61),
+        #111
+    );
+}

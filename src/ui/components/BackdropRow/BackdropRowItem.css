@@ -1,3 +1,7 @@
+.backdrop__row {
+    color: white;
+}
+
 .backdrop__row__list {
     display: flex;
     flex-direction:row;

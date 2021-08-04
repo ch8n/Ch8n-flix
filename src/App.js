@@ -1,4 +1,5 @@
 import './App.css';
+import Header from "./ui/components/Header/Header";
 import PosterRowItem from "./ui/components/PosterRow/PosterRowItem";
 import BackDropRowItem from "./ui/components/BackdropRow/BackdropRowItem";
 import Banner from "./ui/components/Bannner/Banner";
@@ -6,9 +7,8 @@ import api from "./data/remote/api/request";
 
 function App() {
   return (
-    <div>
-      <h1>Netflix Clone!</h1>
-      
+    <div className="app">
+      <Header/>
       <Banner/>
       <div className="row">
         <PosterRowItem title="Netflix Originals" url={api.NetflixOriginal} />

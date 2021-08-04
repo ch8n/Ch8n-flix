@@ -1,3 +1,8 @@
+.poster__row {
+    color: white;
+    margin-top: 20px;
+}
+
 .poster__row__list {
     display: flex;
     flex-direction: row;

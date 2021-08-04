@@ -37,6 +37,9 @@ export default function Banner() {
                     {utils.ellipse(bannerMovie?.overview, 200)}
                 </h1>
             </div>
+
+            <div className="banner__bottom__blend" />
+
         </header>
     )
 }

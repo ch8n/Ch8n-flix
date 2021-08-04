@@ -1,0 +1,26 @@
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    z-index: 1;
+    transition-timing-function: ease-in;
+    transition: all 0.5s;
+}
+
+.header__black {
+    background-color: #111;
+}
+
+.header__logo {
+    height: 80px;
+    object-fit: contain;
+}
+
+.header__avatar {
+    padding: 20px;
+    height: 42px;
+    object-fit: contain;
+}
