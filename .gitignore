@@ -115,6 +115,11 @@ dist
 # production
 /build
 
+# Project exclude paths
+/.gradle/
+/build/
+/build/js/packages/confexplorer/kotlin/
+
 # misc
 .DS_Store
 .env.local
