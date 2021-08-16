@@ -11,16 +11,18 @@ Practising React by building Netflix Clone
 # Learning Resourcce
 [Build Netflix clone](https://www.youtube.com/watch?v=XtMThy8QKqU)
 
+[Official Kotlin-React](https://play.kotlinlang.org/hands-on/Building%20Web%20Applications%20with%20React%20and%20Kotlin%20JS/01_Introduction)
+
 # Preview
 https://user-images.githubusercontent.com/11576342/128147565-1ee0aec8-67da-46ac-afd7-0a686a9bb594.mov
 
 
-# Getting Started with Create React App
+# Getting Started with Project
 
-### `yarn start`
+### Gradle > Kotlin Browser > browserDevelopmentRun
 
 Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Open [http://localhost:8080](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
