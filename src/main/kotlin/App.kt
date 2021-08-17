@@ -18,12 +18,13 @@ class App : RComponent<RProps, RState>() {
             h1 {
                 +"Netflix Clone"
             }
-            repository.getCategories().forEach { category: RowCategory ->
-                rowCategory {
-                    title = category.title
-                    posters = category.posters
+            repository.getCategories().get(0).let { listOf(it) }
+                .forEach { category: RowCategory ->
+                    rowCategory {
+                        title = category.title
+                        fetchUrl = category.categoryFetchUrl
+                    }
                 }
-            }
         }
     }
 }

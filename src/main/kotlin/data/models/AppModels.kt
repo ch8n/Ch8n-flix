@@ -24,5 +24,5 @@ data class KPoster(
 data class RowCategory(
     val id: String,
     val title: String,
-    val posters: List<KPoster>
+    val categoryFetchUrl: String
 )

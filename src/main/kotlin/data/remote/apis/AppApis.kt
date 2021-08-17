@@ -2,8 +2,8 @@ package data.remote.apis
 
 object AppApis {
     val TMDB_API = "" // TODO get from .env file
-    const val BASE_URL = "https=//api.themoviedb.org/3"
-    const val BASE_POSTER_URL = "https=//image.tmdb.org/t/p"
+    const val BASE_URL = "https://api.themoviedb.org/3"
+    const val BASE_POSTER_URL = "https://image.tmdb.org/t/p"
     val GET_TRENDING_MOVIES = "/trending/movie/week?api_key=${TMDB_API}&language=en-US"
     val GET_TRENDING_SERIES = "/trending/tv/week?api_key=${TMDB_API}&language=en-US"
     val GET_DISCOVER_MOVIES = "/discover/movie?api_key=${TMDB_API}&language=en-US"

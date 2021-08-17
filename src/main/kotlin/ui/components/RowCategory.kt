@@ -1,31 +1,29 @@
 package ui.components
 
-import data.models.KPoster
+
 import react.*
 import react.dom.div
 import react.dom.h2
 
 fun RBuilder.rowCategory(handler: RowCategoryProps.() -> Unit): ReactElement {
-    return child(RowCategory::class) {
+    return child(RowCategory) {
         this.attrs(handler)
     }
 }
 
 external interface RowCategoryProps : RProps {
     var title: String
-    var posters: List<KPoster>
+    var fetchUrl: String
 }
 
-@JsExport
-class RowCategory : RComponent<RowCategoryProps, RState>() {
-    override fun RBuilder.render() {
-        div {
-            h2 {
-                +props.title
-            }
-            posterItem {
-                posters = props.posters
-            }
+
+private val RowCategory = functionalComponent<RowCategoryProps> { props ->
+    div {
+        h2 {
+            +props.title
+        }
+        posterItem {
+            fetchUrl = props.fetchUrl
         }
     }
 }

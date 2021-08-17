@@ -1,28 +1,22 @@
 package data.repositories
 
-import data.models.KPoster
 import data.models.RowCategory
+import data.remote.apis.AppApis
 
 class PosterRepository {
 
     fun getCategories(): MutableList<RowCategory> {
         return mutableListOf<RowCategory>(
-            RowCategory(id = "1", title = "Netflix Originals", getPosters()),
-            RowCategory(id = "2", title = "Trending Movies", getPosters()),
-            RowCategory(id = "3", title = "Trending Series", getPosters()),
-            RowCategory(id = "4", title = "Horror", getPosters()),
-            RowCategory(id = "5", title = "Action", getPosters()),
-            RowCategory(id = "6", title = "Comedy", getPosters()),
-            RowCategory(id = "7", title = "Romance", getPosters()),
-            RowCategory(id = "8", title = "Sci-fi", getPosters()),
-            RowCategory(id = "9", title = "Discover Movies", getPosters()),
-            RowCategory(id = "10", title = "Discover Series", getPosters()),
+            RowCategory(id = "1", title = "Netflix Originals", categoryFetchUrl = AppApis.GET_NETFLIX_ORIGINAL),
+            RowCategory(id = "2", title = "Trending Movies", categoryFetchUrl = AppApis.GET_TRENDING_MOVIES),
+            RowCategory(id = "3", title = "Trending Series", categoryFetchUrl = AppApis.GET_TRENDING_SERIES),
+            RowCategory(id = "4", title = "Horror", categoryFetchUrl = AppApis.GET_HORROR_MOVIES),
+            RowCategory(id = "5", title = "Action", categoryFetchUrl = AppApis.GET_ACTION_MOVIES),
+            RowCategory(id = "6", title = "Comedy", categoryFetchUrl = AppApis.GET_COMEDY_MOVIES),
+            RowCategory(id = "7", title = "Romance", categoryFetchUrl = AppApis.GET_ROMANTIC_MOVIES),
+            RowCategory(id = "8", title = "Sci-fi", categoryFetchUrl = AppApis.GET_SCIFI_MOVIES),
+            RowCategory(id = "9", title = "Discover Movies", categoryFetchUrl = AppApis.GET_DISCOVER_MOVIES),
+            RowCategory(id = "10", title = "Discover Series", categoryFetchUrl = AppApis.GET_DISCOVER_SERIES),
         )
-    }
-
-    fun getPosters(): List<KPoster> {
-        val posters = mutableListOf<KPoster>()
-        repeat(20) { posters.add(KPoster.fakePoster) }
-        return posters
     }
 }
