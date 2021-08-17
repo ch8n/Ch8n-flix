@@ -1,25 +1,20 @@
 package data.models
 
 external interface Poster {
-    val id: Int
-    val imageUrl: String
-    val name: String
+    val id: String?
+    val poster_path: String?
+    val name: String?
+    val backdrop_path: String?
+    val overview: String?
+}
+
+external interface PosterResponse {
+    val results: List<Poster>
 }
 
 data class KPoster(
-    override val id: Int,
-    override val imageUrl: String,
-    override val name: String
-) : Poster {
-    companion object {
-        val fakePoster
-            get() = KPoster(
-                id = (1..100).random(),
-                imageUrl = "https://avatars.githubusercontent.com/u/11576342?v=4",
-                name = "Chetan"
-            )
-    }
-}
+    override val results: List<Poster>
+) : PosterResponse
 
 data class RowCategory(
     val id: String,

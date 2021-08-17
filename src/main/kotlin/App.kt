@@ -11,7 +11,7 @@ import ui.components.rowCategory
 @JsExport
 class App : RComponent<RProps, RState>() {
 
-    val repository = PosterRepository()
+    private val repository = PosterRepository()
 
     override fun RBuilder.render() {
         div {

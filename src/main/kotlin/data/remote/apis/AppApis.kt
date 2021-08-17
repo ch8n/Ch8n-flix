@@ -1,9 +1,7 @@
 package data.remote.apis
 
-import utils.process
-
 object AppApis {
-    val TMDB_API: String = process.env.TMDB_API_KEY
+    val TMDB_API: String = ""
     const val BASE_URL = "https://api.themoviedb.org/3"
     const val BASE_POSTER_URL = "https://image.tmdb.org/t/p"
     val GET_TRENDING_MOVIES = "/trending/movie/week?api_key=${TMDB_API}&language=en-US"

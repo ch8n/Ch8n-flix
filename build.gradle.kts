@@ -44,6 +44,8 @@ dependencies {
 
     //Coroutines (chapter 8)
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.0-RC")
+
+    implementation(npm("dotenv", "10.0.0"))
 }
 
 // Heroku Deployment (chapter 9)

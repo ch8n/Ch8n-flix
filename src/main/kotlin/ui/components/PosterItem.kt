@@ -2,6 +2,7 @@ package ui.components
 
 import data.models.KPoster
 import data.remote.apis.AppApis
+import kotlinext.js.asJsObject
 import kotlinx.browser.window
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.await
@@ -20,33 +21,41 @@ fun RBuilder.posterItem(handler: PosterItemProps.() -> Unit): ReactElement {
     }
 }
 
+
 private val PosterItem = functionalComponent<PosterItemProps> { props ->
 
-    val (poster, setPoster) = useState(listOf<KPoster>())
+    val (poster, setPoster) = useState<KPoster?>(null)
 
     useEffect(listOf(props.fetchUrl)) {
         GlobalScope.launch {
             val response = kotlin.runCatching {
-                val json = window.fetch("${AppApis.BASE_URL}/${props.fetchUrl}").await().json().await()
-                println(json)
-                json as? List<KPoster>
+                val json = window.fetch("${AppApis.BASE_URL}${props.fetchUrl}").await().json().await()
+                console.log(json?.asJsObject())
+                (json as? KPoster) ?: throw NullPointerException("Parsing failed")
             }
             if (response.isSuccess) {
-                val result: List<KPoster> = response.getOrNull() ?: emptyList()
+                val result: KPoster = requireNotNull(response.getOrNull())
+                console.log("Success")
+                console.log(result)
                 setPoster(result)
+            } else {
+                console.log(response.exceptionOrNull())
             }
         }
     }
 
     div {
-        poster.forEach {
-            img {
-                attrs {
-                    key = it.id.toString()
-                    src = "${AppApis.BASE_POSTER_URL}/w500/${it.imageUrl}"
-                    alt = it.name
+        (poster?.results ?: emptyList())
+            .filter { it.id != null }
+            .also { console.log(it.asJsObject()) }
+            .forEach {
+                img {
+                    attrs {
+                        key = requireNotNull(it.id?.toString())
+                        src = "${AppApis.BASE_POSTER_URL}/w500/${it.poster_path}"
+                        alt = requireNotNull(it.name)
+                    }
                 }
             }
-        }
     }
 }
