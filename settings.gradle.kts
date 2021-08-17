@@ -7,5 +7,5 @@ pluginManagement {
         maven { setUrl("https://plugins.gradle.org/m2/") }
     }
 }
-rootProject.name = "confexplorer"
+rootProject.name = "netflix-clone"
 

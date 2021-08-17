@@ -118,7 +118,7 @@ dist
 # Project exclude paths
 /.gradle/
 /build/
-/build/js/packages/confexplorer/kotlin/
+/build/js/packages/netflix-clone/kotlin/
 
 # misc
 .DS_Store
