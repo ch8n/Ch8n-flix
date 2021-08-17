@@ -2,7 +2,7 @@ plugins {
     id("org.jetbrains.kotlin.js") version "1.5.0"
 }
 
-group = "io.github.ch8n"
+group = "org.example"
 version = "1.0-SNAPSHOT"
 
 repositories {
@@ -50,5 +50,3 @@ dependencies {
 tasks.register("stage") {
     dependsOn("build")
 }
-
-
