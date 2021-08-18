@@ -1,20 +1,25 @@
 package data.models
 
-external interface Poster {
-    val id: String?
-    val poster_path: String?
-    val name: String?
-    val backdrop_path: String?
-    val overview: String?
-}
+data class Poster(
+    val backdrop_path: String?,
+    val first_air_date: String?,
+    val genre_ids: List<Int>?,
+    val id: Int?,
+    val name: String?,
+    val origin_country: String?,
+    val original_language: String?,
+    val original_name: String?,
+    val overview: String?,
+    val popularity: Double?,
+    val poster_path: String?,
+    val vote_average: Double?,
+    val vote_count: Int?,
+)
 
-external interface PosterResponse {
-    val results: List<Poster>
-}
+data class PosterResponse(
+    val results: Array<Poster>
+)
 
-data class KPoster(
-    override val results: List<Poster>
-) : PosterResponse
 
 data class RowCategory(
     val id: String,

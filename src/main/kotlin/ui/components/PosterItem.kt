@@ -1,8 +1,8 @@
 package ui.components
 
-import data.models.KPoster
+import data.models.Poster
+import data.models.PosterResponse
 import data.remote.apis.AppApis
-import kotlinext.js.asJsObject
 import kotlinx.browser.window
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.await
@@ -24,30 +24,26 @@ fun RBuilder.posterItem(handler: PosterItemProps.() -> Unit): ReactElement {
 
 private val PosterItem = functionalComponent<PosterItemProps> { props ->
 
-    val (poster, setPoster) = useState<KPoster?>(null)
+    val (poster, setPoster) = useState<PosterResponse?>(null)
 
     useEffect(listOf(props.fetchUrl)) {
         GlobalScope.launch {
             val response = kotlin.runCatching {
                 val json = window.fetch("${AppApis.BASE_URL}${props.fetchUrl}").await().json().await()
-                console.log(json?.asJsObject())
-                (json as? KPoster) ?: throw NullPointerException("Parsing failed")
+                val jsonString = JSON.stringify(json)
+                JSON.parse<PosterResponse>(jsonString)
             }
             if (response.isSuccess) {
-                val result: KPoster = requireNotNull(response.getOrNull())
-                console.log("Success")
-                console.log(result)
+                val result: PosterResponse = requireNotNull(response.getOrNull())
                 setPoster(result)
             } else {
-                console.log(response.exceptionOrNull())
+                console.error(response.exceptionOrNull())
             }
         }
     }
 
     div {
-        (poster?.results ?: emptyList())
-            .filter { it.id != null }
-            .also { console.log(it.asJsObject()) }
+        (poster?.results?.toList() ?: emptyList<Poster>())
             .forEach {
                 img {
                     attrs {
@@ -59,3 +55,4 @@ private val PosterItem = functionalComponent<PosterItemProps> { props ->
             }
     }
 }
+
