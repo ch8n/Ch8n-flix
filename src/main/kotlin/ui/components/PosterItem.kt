@@ -56,7 +56,10 @@ private val PosterItem = functionalComponent<PosterItemProps> { props ->
             overflowY = Overflow.hidden
             padding(top = 10.px, bottom = 10.px, left = 10.px)
 
-
+            // custom rule
+            rule("&::-webkit-scrollbar") {
+                display = Display.none
+            }
 
             children("img") {
                 objectFit = ObjectFit.contain
@@ -78,7 +81,7 @@ private val PosterItem = functionalComponent<PosterItemProps> { props ->
                     attrs {
                         key = requireNotNull(it.id?.toString())
                         src = "${AppApis.BASE_POSTER_URL}/w500/${it.poster_path}"
-                        alt = requireNotNull(it.name)
+                        alt = it.name ?: "error"
                     }
                 }
             }
