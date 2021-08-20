@@ -1,15 +1,20 @@
 package ui.components
 
-import data.models.Poster
 import data.models.PosterResponse
 import data.remote.apis.AppApis
 import kotlinx.browser.window
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.await
 import kotlinx.coroutines.launch
+import kotlinx.css.*
+import kotlinx.css.properties.ms
+import kotlinx.css.properties.scale
+import kotlinx.css.properties.transform
+import kotlinx.css.properties.transition
 import react.*
-import react.dom.div
 import react.dom.img
+import styled.css
+import styled.styledDiv
 
 external interface PosterItemProps : RProps {
     var fetchUrl: String
@@ -42,8 +47,32 @@ private val PosterItem = functionalComponent<PosterItemProps> { props ->
         }
     }
 
-    div {
-        (poster?.results?.toList() ?: emptyList<Poster>())
+    styledDiv {
+
+        css {
+            display = Display.flex
+            flexDirection = FlexDirection.row
+            overflowX = Overflow.scroll
+            overflowY = Overflow.hidden
+            padding(top = 10.px, bottom = 10.px, left = 10.px)
+
+
+
+            children("img") {
+                objectFit = ObjectFit.contain
+                width = 100.pct // 100%
+                maxHeight = 240.px
+                margin(right = 10.px)
+                transition(property = "transform", duration = 450.ms)
+                hover {
+                    transform {
+                        scale(1.09)
+                    }
+                }
+            }
+        }
+
+        (poster?.results?.toList() ?: emptyList())
             .forEach {
                 img {
                     attrs {
