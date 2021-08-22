@@ -18,6 +18,7 @@ import styled.styledDiv
 
 external interface PosterItemProps : RProps {
     var fetchUrl: String
+    var isStyleBackDrop: Boolean
 }
 
 fun RBuilder.posterItem(handler: PosterItemProps.() -> Unit): ReactElement {
@@ -65,6 +66,7 @@ private val PosterItem = functionalComponent<PosterItemProps> { props ->
                 objectFit = ObjectFit.contain
                 width = 100.pct // 100%
                 maxHeight = 240.px
+                maxWidth = 360.px
                 margin(right = 10.px)
                 transition(property = "transform", duration = 450.ms)
                 hover {
@@ -80,8 +82,11 @@ private val PosterItem = functionalComponent<PosterItemProps> { props ->
                 img {
                     attrs {
                         key = requireNotNull(it.id?.toString())
-                        src = "${AppApis.BASE_POSTER_URL}/w500/${it.poster_path}"
-                        alt = it.name ?: "error"
+                        src = when {
+                            props.isStyleBackDrop -> "${AppApis.BASE_POSTER_URL}/w500/${it.backdrop_path}"
+                            else -> "${AppApis.BASE_POSTER_URL}/w500/${it.poster_path}"
+                        }
+                        alt = it.name ?: "error "
                     }
                 }
             }

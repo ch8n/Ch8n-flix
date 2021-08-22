@@ -24,5 +24,6 @@ data class PosterResponse(
 data class RowCategory(
     val id: String,
     val title: String,
-    val categoryFetchUrl: String
+    val categoryFetchUrl: String,
+    val isStyleBackDrop: Boolean
 )

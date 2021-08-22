@@ -14,6 +14,7 @@ fun RBuilder.rowCategory(handler: RowCategoryProps.() -> Unit): ReactElement {
 external interface RowCategoryProps : RProps {
     var title: String
     var fetchUrl: String
+    var isStyleBackDrop: Boolean
 }
 
 
@@ -24,6 +25,7 @@ private val RowCategory = functionalComponent<RowCategoryProps> { props ->
         }
         posterItem {
             fetchUrl = props.fetchUrl
+            isStyleBackDrop = props.isStyleBackDrop
         }
     }
 }
