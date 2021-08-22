@@ -1,10 +1,14 @@
 import data.models.RowCategory
 import data.repositories.PosterRepository
+import kotlinx.css.margin
+import kotlinx.css.padding
+import kotlinx.css.px
 import react.RBuilder
 import react.RComponent
 import react.RProps
 import react.RState
-import react.dom.div
+import styled.css
+import styled.styledDiv
 import ui.components.AppHeader
 import ui.components.rowCategory
 
@@ -14,8 +18,11 @@ class App : RComponent<RProps, RState>() {
     private val repository = PosterRepository()
 
     override fun RBuilder.render() {
-        div {
-
+        styledDiv {
+            css {
+                padding(all = 0.px)
+                margin(all = 0.px)
+            }
             AppHeader {
 
             }
