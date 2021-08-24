@@ -6,6 +6,7 @@ data class Poster(
     val genre_ids: List<Int>?,
     val id: Int?,
     val name: String?,
+    val title: String?,
     val origin_country: String?,
     val original_language: String?,
     val original_name: String?,

@@ -1,9 +1,14 @@
 package ui.components
 
 
+import kotlinx.css.Color
+import kotlinx.css.color
+import kotlinx.css.margin
+import kotlinx.css.px
 import react.*
 import react.dom.div
-import react.dom.h2
+import styled.css
+import styled.styledH2
 
 fun RBuilder.rowCategory(handler: RowCategoryProps.() -> Unit): ReactElement {
     return child(RowCategory) {
@@ -20,7 +25,11 @@ external interface RowCategoryProps : RProps {
 
 private val RowCategory = functionalComponent<RowCategoryProps> { props ->
     div {
-        h2 {
+        styledH2 {
+            css {
+                color = Color.white
+                margin(left = 20.px)
+            }
             +props.title
         }
         posterItem {

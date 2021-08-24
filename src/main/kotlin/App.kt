@@ -1,8 +1,6 @@
 import data.models.RowCategory
 import data.repositories.PosterRepository
-import kotlinx.css.margin
-import kotlinx.css.padding
-import kotlinx.css.px
+import kotlinx.css.*
 import react.RBuilder
 import react.RComponent
 import react.RProps
@@ -10,6 +8,7 @@ import react.RState
 import styled.css
 import styled.styledDiv
 import ui.components.AppHeader
+import ui.components.Banner
 import ui.components.rowCategory
 
 @JsExport
@@ -22,10 +21,10 @@ class App : RComponent<RProps, RState>() {
             css {
                 padding(all = 0.px)
                 margin(all = 0.px)
+                backgroundColor = Color("#111")
             }
-            AppHeader {
-
-            }
+            AppHeader { }
+            Banner { }
             repository.getCategories()
                 .forEach { category: RowCategory ->
                     rowCategory {

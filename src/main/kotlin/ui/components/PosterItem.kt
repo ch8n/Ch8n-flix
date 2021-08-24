@@ -49,13 +49,13 @@ private val PosterItem = functionalComponent<PosterItemProps> { props ->
     }
 
     styledDiv {
-
         css {
+
             display = Display.flex
             flexDirection = FlexDirection.row
             overflowX = Overflow.scroll
             overflowY = Overflow.hidden
-            padding(top = 10.px, bottom = 10.px, left = 10.px)
+            padding(top = 10.px, bottom = 10.px, left = 20.px)
 
             // custom rule
             rule("&::-webkit-scrollbar") {
@@ -91,5 +91,6 @@ private val PosterItem = functionalComponent<PosterItemProps> { props ->
                 }
             }
     }
+
 }
 

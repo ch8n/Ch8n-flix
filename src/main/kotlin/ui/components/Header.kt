@@ -2,6 +2,7 @@ package ui.components
 
 import kotlinx.browser.window
 import kotlinx.css.*
+import kotlinx.css.properties.Timing
 import kotlinx.css.properties.s
 import kotlinx.css.properties.transition
 import org.w3c.dom.events.Event
@@ -52,7 +53,7 @@ private val Header = functionalComponent<RProps> { props ->
             display = Display.flex
             justifyContent = JustifyContent.spaceBetween
             zIndex = 1
-            transition(property = "all", duration = 0.5.s)
+            transition(property = "all", duration = 0.5.s, Timing.easeIn)
         }
 
         styledImg {
