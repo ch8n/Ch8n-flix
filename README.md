@@ -6,7 +6,8 @@
 Practising React by building Netflix Clone
 
 # Requirements
-- [TMDB api key](https://www.themoviedb.org/)
+- [TMDB api key](https://www.themoviedb.org/) : Add TMDB API key
+  to [AppApi.kt](src/main/kotlin/data/remote/apis/AppApis.kt)
 
 # Learning Resourcce
 [Build Netflix clone](https://www.youtube.com/watch?v=XtMThy8QKqU)
