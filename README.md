@@ -6,17 +6,27 @@
 Practising React by building Netflix Clone
 
 # Requirements
+
 - [TMDB api key](https://www.themoviedb.org/) : Add TMDB API key
   to [AppApi.kt](src/main/kotlin/data/remote/apis/AppApis.kt)
 
 # Learning Resourcce
+
 [Build Netflix clone](https://www.youtube.com/watch?v=XtMThy8QKqU)
 
 [Official Kotlin-React](https://play.kotlinlang.org/hands-on/Building%20Web%20Applications%20with%20React%20and%20Kotlin%20JS/01_Introduction)
 
-# Preview
-https://user-images.githubusercontent.com/11576342/128147565-1ee0aec8-67da-46ac-afd7-0a686a9bb594.mov
+# Features
 
+- [Kotlin-React](https://github.com/JetBrains/kotlin-wrappers/tree/master/kotlin-react)
+- [Kotlin-Styled-Component](https://github.com/JetBrains/kotlin-wrappers/tree/master/kotlin-styled)
+- [Coroutines](https://kotlinlang.org/docs/coroutines-overview.html)
+- [Modern React](https://play.kotlinlang.org/hands-on/Building%20Web%20Applications%20with%20React%20and%20Kotlin%20JS/10_Addendum_Modern_React_with_Hooks)
+  - `useState`, `useEffect`, `functional-components`
+
+# Preview
+
+https://user-images.githubusercontent.com/11576342/128147565-1ee0aec8-67da-46ac-afd7-0a686a9bb594.mov
 
 # Getting Started with Project
 
