@@ -3,8 +3,9 @@ package ui.components
 import data.models.PosterResponse
 import data.remote.apis.AppApis
 import kotlinx.browser.window
-import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.MainScope
 import kotlinx.coroutines.await
+import kotlinx.coroutines.cancel
 import kotlinx.coroutines.launch
 import kotlinx.css.*
 import kotlinx.css.properties.ms
@@ -32,8 +33,9 @@ private val PosterItem = functionalComponent<PosterItemProps> { props ->
 
     val (poster, setPoster) = useState<PosterResponse?>(null)
 
-    useEffect(listOf(props.fetchUrl)) {
-        GlobalScope.launch {
+    useEffectWithCleanup(listOf(props.fetchUrl)) {
+        val mainScope = MainScope()
+        mainScope.launch {
             val response = kotlin.runCatching {
                 val json = window.fetch("${AppApis.BASE_URL}${props.fetchUrl}").await().json().await()
                 val jsonString = JSON.stringify(json)
@@ -46,11 +48,14 @@ private val PosterItem = functionalComponent<PosterItemProps> { props ->
                 console.error(response.exceptionOrNull())
             }
         }
+
+        return@useEffectWithCleanup {
+            mainScope.cancel()
+        }
     }
 
     styledDiv {
         css {
-
             display = Display.flex
             flexDirection = FlexDirection.row
             overflowX = Overflow.scroll

@@ -4,8 +4,9 @@ import data.models.Poster
 import data.models.PosterResponse
 import data.remote.apis.AppApis
 import kotlinx.browser.window
-import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.MainScope
 import kotlinx.coroutines.await
+import kotlinx.coroutines.cancel
 import kotlinx.coroutines.launch
 import kotlinx.css.*
 import kotlinx.css.properties.LineHeight
@@ -26,9 +27,9 @@ fun RBuilder.Banner(handler: RProps.() -> Unit): ReactElement {
 private val Banner = functionalComponent<RProps> { props ->
 
     val (banner, setBanner) = useState<Poster?>(null)
-
-    useEffect(emptyList()) {
-        GlobalScope.launch {
+    useEffectWithCleanup(emptyList()) {
+        val mainScope = MainScope()
+        mainScope.launch {
             val response = kotlin.runCatching {
                 val json = window.fetch("${AppApis.BASE_URL}${AppApis.GET_NETFLIX_ORIGINAL}").await().json().await()
                 val jsonString = JSON.stringify(json)
@@ -40,6 +41,9 @@ private val Banner = functionalComponent<RProps> { props ->
             } else {
                 console.error(response.exceptionOrNull())
             }
+        }
+        return@useEffectWithCleanup {
+            mainScope.cancel()
         }
     }
 
