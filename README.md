@@ -30,11 +30,6 @@ Netflix-clone/src
 │       └── utils.js
 ├── index.css
 ├── index.js
-├── main
-│   ├── kotlin
-│   │   └── ui
-│   └── resources
-├── structure.txt
 └── ui
     └── components
         ├── BackdropRow
