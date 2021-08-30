@@ -31,7 +31,7 @@ https://user-images.githubusercontent.com/11576342/128147565-1ee0aec8-67da-46ac-
 # Project Structure
 
 ```
-main
+netflix-clone/src/main
 ├── kotlin
 │   ├── App.kt
 │   ├── data
