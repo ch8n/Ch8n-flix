@@ -28,6 +28,37 @@ Practising React by building Netflix Clone
 
 https://user-images.githubusercontent.com/11576342/128147565-1ee0aec8-67da-46ac-afd7-0a686a9bb594.mov
 
+# Project Structure
+
+```
+main
+├── kotlin
+│   ├── App.kt
+│   ├── data
+│   │   ├── models
+│   │   │   └── AppModels.kt
+│   │   ├── remote
+│   │   │   └── apis
+│   │   │       └── AppApis.kt
+│   │   └── repositories
+│   │       └── PosterRepository.kt
+│   ├── main.kt
+│   ├── ui
+│   │   └── components
+│   │       ├── Banner.kt
+│   │       ├── Header.kt
+│   │       ├── PosterItem.kt
+│   │       └── RowCategory.kt
+│   └── utils
+│       └── EnvSetup.kt
+└── resources
+    ├── images
+    │   ├── avatar.png
+    │   └── netflix.png
+    └── index.html
+
+```
+
 # Getting Started with Project
 
 ### Gradle > Kotlin Browser > browserDevelopmentRun
