@@ -14,6 +14,44 @@ Practising React by building Netflix Clone
 # Preview
 https://user-images.githubusercontent.com/11576342/128147565-1ee0aec8-67da-46ac-afd7-0a686a9bb594.mov
 
+# Project Structure
+
+```
+Netflix-clone/src
+├── App.css
+├── App.js
+├── data
+│   ├── remote
+│   │   ├── api
+│   │   │   └── request.js
+│   │   └── httpClient
+│   │       └── httpClient.js
+│   └── utils
+│       └── utils.js
+├── index.css
+├── index.js
+├── main
+│   ├── kotlin
+│   │   └── ui
+│   └── resources
+├── structure.txt
+└── ui
+    └── components
+        ├── BackdropRow
+        │   ├── BackdropRowItem.css
+        │   └── BackdropRowItem.js
+        ├── Bannner
+        │   ├── Banner.css
+        │   └── Banner.js
+        ├── Header
+        │   ├── Header.css
+        │   ├── Header.js
+        │   ├── avatar.png
+        │   └── netflix.png
+        └── PosterRow
+            ├── PosterRowItem.css
+            └── PosterRowItem.js
+```
 
 # Getting Started with Create React App
 
