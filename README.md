@@ -3,33 +3,30 @@
 
 
 # Netflix-Clone-React
-Practising React by building Netflix Clone
+Netflix inspired Home Screen build using Jetpack Compose Web 🕸
 
 # Requirements
 
-- [TMDB api key](https://www.themoviedb.org/) : Add TMDB API key
+>[TMDB api key](https://www.themoviedb.org/) : Add TMDB API key
   to [AppApi.kt](src/main/kotlin/data/remote/apis/AppApis.kt)
 
 # Learning Resourcce
 
-[Build Netflix clone](https://www.youtube.com/watch?v=XtMThy8QKqU)
-
-[Official Kotlin-React](https://play.kotlinlang.org/hands-on/Building%20Web%20Applications%20with%20React%20and%20Kotlin%20JS/01_Introduction)
+>[Build Netflix clone](https://www.youtube.com/watch?v=XtMThy8QKqU)
+> 
+>[Official Compose-Web Github](https://play.kotlinlang.org/hands-on/Building%20Web%20Applications%20with%20React%20and%20Kotlin%20JS/01_Introduction)
+> 
+>[theApache64-Jetpack Web Template](https://github.com/theapache64/compose-web-template)
 
 # Features
-
-- [Kotlin-React](https://github.com/JetBrains/kotlin-wrappers/tree/master/kotlin-react)
-- [Kotlin-Styled-Component](https://github.com/JetBrains/kotlin-wrappers/tree/master/kotlin-styled)
-- [Coroutines](https://kotlinlang.org/docs/coroutines-overview.html)
-- [Modern React](https://play.kotlinlang.org/hands-on/Building%20Web%20Applications%20with%20React%20and%20Kotlin%20JS/10_Addendum_Modern_React_with_Hooks)
-  - `useState`, `useEffect`, `functional-components`
+[Jetpack-Compose-Web](https://github.com/jetbrains/compose-jb)
 
 # Preview
 
 https://user-images.githubusercontent.com/11576342/128147565-1ee0aec8-67da-46ac-afd7-0a686a9bb594.mov
 
 # Project Structure
-
+> TODO UPDATE
 ```
 netflix-clone/src/main
 ├── kotlin
@@ -60,14 +57,10 @@ netflix-clone/src/main
 ```
 
 # Getting Started with Project
+```
+./gradlew jsBrowserRun
+```
 
-### Gradle > Kotlin Browser > browserDevelopmentRun
-
-Runs the app in the development mode.\
-Open [http://localhost:8080](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
 # MIT License
 
