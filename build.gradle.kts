@@ -12,6 +12,10 @@ repositories {
     maven("https://maven.pkg.jetbrains.space/public/p/compose/dev")
 }
 
+dependencies {
+
+}
+
 kotlin {
     js(IR) {
         browser()
