@@ -4,22 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6e3bf25b-01cf-4512-a019-d6a7ace7c39e" name="Changes" comment="🚧 project init&#10;- fixed imports">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/netflix_clone_js_1_0_0_alpha01.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/compose_web_template_js_1_0_0_alpha01.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/compose-web-template.commonTest.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/compose-web-template.jsTest.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jsMain/kotlin/main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/jsMain/kotlin/main.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jsMain/resources/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/jsMain/resources/index.html" afterDir="false" />
+    <list default="true" id="6e3bf25b-01cf-4512-a019-d6a7ace7c39e" name="Changes" comment="🚧 project init&#10;- fixed imports&#10;- fixed version&#10;- fixed preview">
+      <change afterPath="$PROJECT_DIR$/src/jsMain/kotlin/data/models/AppModels.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/jsMain/kotlin/data/remote/api/AppApis.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/jsMain/kotlin/key.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,6 +58,14 @@
       </state>
     </system>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Kotlin Object" />
+        <option value="Kotlin File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -98,6 +96,9 @@
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/jsMain/resources" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
     </key>
   </component>
   <component name="RunManager" selected="Gradle.Netflix-Clone [jsBrowserRun]">
@@ -206,7 +207,14 @@
       <option name="project" value="LOCAL" />
       <updated>1630742030852</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="🚧 project init&#10;- fixed imports&#10;- fixed version&#10;- fixed preview">
+      <created>1630822241682</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1630822241682</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -225,6 +233,9 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value=" project init" />
     <MESSAGE value=" project init&#10;- fixed imports" />
-    <option name="LAST_COMMIT_MESSAGE" value=" project init&#10;- fixed imports" />
+    <MESSAGE value=" project init&#10;- fixed imports&#10;- fixed version&#10;- fixed preview" />
+    <option name="LAST_COMMIT_MESSAGE" value=" project init&#10;- fixed imports&#10;- fixed version&#10;- fixed preview" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>
