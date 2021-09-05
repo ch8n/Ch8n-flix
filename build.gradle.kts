@@ -1,7 +1,9 @@
+import org.jetbrains.compose.compose
+
 // Add compose gradle plugin
 plugins {
-    kotlin("multiplatform") version "1.5.10"
-    id("org.jetbrains.compose") version "0.0.0-web-dev-14"
+    kotlin("multiplatform") version "1.5.30"
+    id("org.jetbrains.compose") version ("1.0.0-alpha4-build331")
 }
 group = "io.github.ch8n"
 version = "1.0.0-alpha01"
@@ -10,6 +12,7 @@ version = "1.0.0-alpha01"
 repositories {
     mavenCentral()
     maven("https://maven.pkg.jetbrains.space/public/p/compose/dev")
+    google()
 }
 
 dependencies {
@@ -23,6 +26,8 @@ kotlin {
     }
     sourceSets {
         val jsMain by getting {
+            kotlin.srcDir("src/jsMain/kotlin")
+            resources.srcDir("src/jsMain/resources")
             dependencies {
                 implementation(compose.web.core)
                 implementation(compose.runtime)
