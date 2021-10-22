@@ -3,6 +3,7 @@ import org.jetbrains.compose.web.dom.Button
 import org.jetbrains.compose.web.dom.Div
 import org.jetbrains.compose.web.dom.Text
 import org.jetbrains.compose.web.renderComposable
+import ui.components.PosterItem
 
 fun main() {
     renderComposable(rootElementId = "root") {
@@ -13,6 +14,8 @@ fun main() {
 @Composable
 fun Body() {
     var counter by remember { mutableStateOf(0) }
+    PosterItem()
+
     Div {
         Text("Clicked: ${counter}")
     }
