@@ -2,7 +2,7 @@ package data.remote.apis
 
 object AppApis {
     // add TMDB api here
-    val TMDB_API: String = ""
+    val TMDB_API: String = "68097a3b37073af6dd77177512550fac"
     const val BASE_URL = "https://api.themoviedb.org/3"
     const val BASE_POSTER_URL = "https://image.tmdb.org/t/p"
     val GET_TRENDING_MOVIES = "/trending/movie/week?api_key=${TMDB_API}&language=en-US"
